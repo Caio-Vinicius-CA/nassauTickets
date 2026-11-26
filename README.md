@@ -1,4 +1,4 @@
-# nassauTickets
+﻿# nassauTickets
 
 Sistema de Controle de Atendimento e Gestão de Filas desenvolvido para um Laboratório de Análises Clínicas, contemplando emissão de senhas via totem, painel de chamadas com síntese de voz, terminal de atendimento e relatórios gerenciais e de auditoria.
 
@@ -8,7 +8,7 @@ Consolidar práticas de engenharia de software, controle de versão com Git/GitH
 
 ## Tecnologias Utilizadas
 
-- **Frontend:** React 19, Vite, TypeScript / JavaScript, CSS3 / Tailwind CSS e Web Speech API (áudio das chamadas)
+- **Frontend:** React 19, Vite, TypeScript / JavaScript, Tailwind CSS e Web Speech API (áudio das chamadas)
 - **Backend:** Node.js LTS 22 com Express
 - **Banco de Dados:** MySQL 8.0
 - **Versionamento:** Git e GitHub (fluxo `dev` -> `main`)
@@ -25,16 +25,49 @@ O sistema opera com três agentes principais:
 
 ### Estrutura do Repositório
 
-```text
-nassauTickets/
-├── backend/          # API REST em Node.js + Express e scripts SQL
-├── docs/             # Documentação técnica do projeto
-│   ├── branding/     # Identidade visual
-│   ├── mer/          # Modelo Entidade-Relacionamento
-│   ├── mockups/      # Protótipos de telas
-│   ├── models/uml/   # Diagramas UML
-│   └── requirements/ # Requisitos funcionais, não funcionais e regras de negócio
-├── frontend/         # Aplicação Web em React
-├── .gitignore
-├── LICENSE
-└── README.md
+    nassauTickets/
+    ├── backend/          # API REST em Node.js + Express e scripts SQL
+    ├── docs/             # Documentação técnica do projeto
+    │   ├── branding/     # Identidade visual
+    │   ├── mer/          # Modelo Entidade-Relacionamento
+    │   ├── mockups/      # Protótipos de telas
+    │   ├── models/uml/   # Diagramas UML
+    │   └── requirements/ # Requisitos funcionais, não funcionais e regras de negócio
+    ├── frontend/         # Aplicação Web em React
+    ├── .gitignore
+    ├── LICENSE
+    └── README.md
+
+## Configuração e Execução
+
+### Pré-requisitos
+- Node.js LTS 22+
+- MySQL 8.0+ (ou XAMPP/MySQL Server local)
+
+### 1. Banco de Dados
+1. Crie um banco de dados chamado `nassautickets` no MySQL 8.0.
+2. Execute o script SQL localizado em `backend/database/schema.sql`.
+
+### 2. Backend
+    cd backend
+    npm install
+    Copy-Item .env.example .env
+    npm run dev
+
+### 3. Frontend
+    cd frontend
+    npm install
+    npm run dev
+
+Acesse a aplicação no navegador pelo endereço exibido no terminal (geralmente `http://localhost:5173`).
+
+## Fluxo de Branches
+
+- `main`: Branch de produção/entrega final estável.
+- `dev`: Branch principal de desenvolvimento, onde todas as funcionalidades e documentações são integradas antes do merge final para a `main`.
+
+## Membros
+
+| Nome | Matrícula | Papel |
+| :--- | :--- | :--- |
+| Caio Vinícius Cordeiro do Amaral | 24010151 | Scrum Master, Documentador, Desenvolvedor, Testador 
