@@ -81,7 +81,7 @@ INSERT IGNORE INTO guiches (numero, descricao, ativo) VALUES
 (3, 'Guichê 03 - Atendimento Rápido / Geral', 1);
 
 -- Senha padrão para teste: 123456
--- Hash bcrypt '123456': $2b$10$8K1p/a0dL1LXMIgoEDFrwOfMQ16p1R.qT8bA5s1B6wP2z6yZ9K8W2
+-- Hash bcrypt de '123456' (bcryptjs, custo 10)
 INSERT IGNORE INTO usuarios (nome, matricula, login, senha_hash, perfil, ativo) VALUES
-('Gestor Laboratório', '20260001', 'gestor', '$2b$10$8K1p/a0dL1LXMIgoEDFrwOfMQ16p1R.qT8bA5s1B6wP2z6yZ9K8W2', 'GESTOR', 1),
-('Atendente Padrão', '20260002', 'atendente1', '$2b$10$8K1p/a0dL1LXMIgoEDFrwOfMQ16p1R.qT8bA5s1B6wP2z6yZ9K8W2', 'ATENDENTE', 1);
+('Gestor Laboratório', '20260001', 'gestor', '$2a$10$Qibg9UUhwuga.sN4bCViweWuf7EjkaKvXd/UgpyLVWDz7JFB/QIcK', 'GESTOR', 1),
+('Atendente Padrão', '20260002', 'atendente1', '$2a$10$Qibg9UUhwuga.sN4bCViweWuf7EjkaKvXd/UgpyLVWDz7JFB/QIcK', 'ATENDENTE', 1);
